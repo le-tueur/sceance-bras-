@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séance Bras : Biceps & Triceps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --danger: #dc3545;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        .exercice {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        .exercice:nth-child(2) { animation-delay: 0.1s; }
+        .exercice:nth-child(3) { animation-delay: 0.2s; }
+        .exercice:nth-child(4) { animation-delay: 0.3s; }
+        .exercice:nth-child(5) { animation-delay: 0.4s; }
+        .exercice:nth-child(6) { animation-delay: 0.5s; }
+        .exercice:nth-child(7) { animation-delay: 0.6s; }
+        .exercice:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        .exercice h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .exercice h3 i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        .serie {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        .serie:last-of-type {
+            border-bottom: none;
+        }
+        .serie-name {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        .serie-value {
+            font-weight: 600;
+            color: var(--danger);
+        }
+        .detail {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px 10px; }
+            h1 { font-size: 2rem; }
+            .exercice { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-dumbbell"></i> SÉANCE BRAS : BICEPS & TRICEPS</h1>
+            <p class="subtitle">Programme intensif pour des bras massifs et définis</p>
+        </header>
+
+        <div class="exercice">
+            <h3><i class="fas fa-bicep-curl"></i> Curl Pupitre (Machine) — Biceps</h3>
+            <div class="serie">
+                <span class="serie-name">Échauffement</span>
+                <span class="serie-value">1 série légère (15-20 reps)</span>
+            </div>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">3 séries de 8 à 12 répétitions</span>
+            </div>
+            <div class="serie">
+                <span class="serie-name">Série Finale</span>
+                <span class="serie-value">1 Drop Set (10 reps → -30% → max reps → -30% → échec)</span>
+            </div>
+            <p class="detail">Focus : Contraction maximale, contrôlez la descente.</p>
+        </div>
+
+        <div class="exercice">
+            <h3><i class="fas fa-arm-flex"></i> Extensions Triceps (Poulie Haute) — Triceps</h3>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">4 séries de 10-12 répétitions</span>
+            </div>
+            <p class="detail">Gardez les coudes collés aux côtes. Utilisez deux cordes si possible pour écarter les mains en bas du mouvement.</p>
+        </div>
+
+        <div class="exercice">
+            <h3><i class="fas fa-fire"></i> Curl Barre EZ + Curl Prise Marteau (Superset) — Biceps/Avant-bras</h3>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">3 séries de 12 répétitions sur chaque exercice</span>
+            </div>
+            <p class="detail">Enchaînez les 12 reps à la barre EZ, puis prenez immédiatement les haltères pour 12 reps en prise marteau. Repos après le superset.</p>
+        </div>
+
+        <div class="exercice">
+            <h3><i class="fas fa-chair"></i> Dips sur machine — Triceps</h3>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">3 séries de 8 à 10 répétitions</span>
+            </div>
+            <p class="detail">Chargez lourd, buste droit pour isoler les triceps. C’est l’exercice de puissance.</p>
+        </div>
+
+        <div class="exercice">
+            <h3><i class="fas fa-couch"></i> Curl Incliné (Haltères) — Biceps</h3>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">3 séries de 10 à 12 répétitions</span>
+            </div>
+            <p class="detail">Banc incliné à 45°. Laissez bien descendre les bras pour sentir l’étirement en bas.</p>
+        </div>
+
+        <div class="exercice">
+            <h3><i class="fas fa-head-side"></i> Extensions derrière la tête — Triceps</h3>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">3 séries de 12 répétitions</span>
+            </div>
+            <p class="detail">Focus : Longue portion. Ne cherchez pas à mettre trop lourd, privilégiez la sensation.</p>
+        </div>
+
+        <div class="exercice">
+            <h3><i class="fas fa-bolt"></i> Curl Dos à la poulie (Bayesian Curl) — Biceps</h3>
+            <div class="serie">
+                <span class="serie-name">Travail</span>
+                <span class="serie-value">3 séries de 12 à 15 répétitions</span>
+            </div>
+            <p class="detail">Ne vous penchez pas en avant. Le coude doit rester légèrement derrière la ligne du corps tout au long du mouvement.</p>
+        </div>
+
+        <footer>
+            <p><i class="fas fa-heartbeat"></i> Bonne séance !</p>
+        </footer>
+    </div>
+</body>
+</html>
